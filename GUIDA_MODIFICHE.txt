@@ -1,0 +1,42 @@
+SITO DI GLORIA LOMBARDO — GUIDA PER MODIFICARLO
+
+FILE
+- index.html: tutto il sito (testi, colori, sezioni, stile e animazioni).
+- Aprilo con un editor di testo/codice (Visual Studio Code è gratuito) oppure con Blocco note.
+- Per vedere il sito, fai doppio clic su index.html e aprilo in Chrome/Edge.
+
+CAMBIARE I TESTI
+1. Apri index.html.
+2. Cerca il testo che vuoi cambiare (Ctrl+F).
+3. Sostituiscilo senza cancellare i tag HTML attorno. Per esempio cambia “Piacere, Gloria.” mantenendo <h3> e </h3>.
+4. Salva e aggiorna il browser.
+
+CAMBIARE I COLORI
+All'inizio del CSS, cerca :root. Modifica questi valori:
+--bg: sfondo scuro
+--bg2: secondo sfondo scuro
+--pink: fucsia principale
+--pink-light: fucsia chiaro
+--yellow: giallo canarino
+--paper: sfondo chiaro
+Puoi usare codici esadecimali tipo #ffdf35.
+
+INSERIRE UNA FOTO DI GLORIA
+1. Metti una foto nella stessa cartella di index.html e chiamala gloria.jpg.
+2. Cerca nel file la frase “Qui va la foto di Gloria”.
+3. Sostituisci tutto il blocco <div class="photo-slot ...">...</div> con:
+   <div class="photo-slot reveal"><img src="gloria.jpg" alt="Gloria Lombardo" style="width:100%;height:100%;min-height:360px;object-fit:cover;position:absolute;inset:0"></div>
+4. Per aggiungere anche la foto grande nella copertina, dimmelo oppure duplica il tag img nel blocco .hero-card. Per GitHub Pages carica anche gloria.jpg nel repository.
+
+AGGIUNGERE / TOGLIERE SEZIONI
+Ogni sezione inizia con <section ...> e finisce con </section>. Fai una copia di una sezione esistente e modifica il contenuto, facendo attenzione a mantenere i tag di apertura/chiusura.
+
+PUBBLICARE GRATIS CON GITHUB PAGES
+1. Accedi a https://github.com e crea un repository pubblico chiamato gloria-lombardo.
+2. Carica index.html (e gloria.jpg se aggiungi la foto) nel repository.
+3. Apri Settings > Pages.
+4. In Build and deployment seleziona “Deploy from a branch”.
+5. Scegli branch main e cartella /(root), poi Save.
+6. Attendi qualche minuto: GitHub mostrerà l'indirizzo pubblico nella sezione Pages.
+
+Nota: i font Google richiedono Internet; il sito usa comunque font alternativi se non si caricano.

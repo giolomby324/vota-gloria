@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#15111c">
+<meta name="description" content="Gloria Lombardo — Candidata a rappresentante d'istituto al Liceo Classico Cielo D'Alcamo.">
+<title>Cambia storia, vota Gloria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#15111c;--bg2:#21172a;--pink:#f52c9b;--pink-light:#ff80c5;--yellow:#ffdf35;--paper:#eee877;--ink:#21172a;--muted:#cfc4d3;--block:#202094;--line:rgba(255,255,255,.15)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--bg);color:#fffafc;font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}
+.nav{position:fixed;z-index:10;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:15px clamp(18px,5vw,76px);background:rgba(21,17,28,.83);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.brand{font-family:Manrope,sans-serif;font-weight:900;letter-spacing:-.05em;line-height:1.05}.brand span{display:block;color:var(--yellow);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
+.navlinks{display:flex;gap:clamp(12px,2vw,28px);align-items:center;font-size:.78rem;font-weight:800}.navlinks a{opacity:.9}.navlinks a:hover{color:var(--yellow)}.navlinks .cta{background:var(--yellow);color:var(--ink);padding:11px 18px;border-radius:100px;opacity:1}.menu{display:none;background:none;color:white;border:0;font-size:1.5rem}
+.hero{min-height:100svh;position:relative;overflow:hidden;display:flex;align-items:center;padding:140px clamp(22px,8vw,120px) 80px;background:radial-gradient(ellipse at 78% 32%,rgba(245,44,155,.28),transparent 35%),linear-gradient(125deg,#15111c 5%,#21172a 65%,#321b35)}
+.hero:before{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(255,223,53,.25);border-radius:50%;right:-100px;top:8%;box-shadow:0 0 0 55px rgba(245,44,155,.035),0 0 0 110px rgba(255,223,53,.025)}
+.grid{width:100%;max-width:1240px;margin:auto;display:grid;grid-template-columns:1.08fr .92fr;gap:5vw;align-items:center;position:relative;z-index:1}
+.eyebrow{color:var(--yellow);font-weight:900;text-transform:uppercase;letter-spacing:.15em;font-size:.78rem}.hero h1{font-family:Manrope,sans-serif;font-size:clamp(3rem,7.3vw,7rem);line-height:.94;letter-spacing:-.075em;margin:20px 0}.hero h1 em{font-style:normal;color:var(--pink);display:block;text-shadow:3px 3px 0 var(--yellow)}.hero p{font-size:clamp(1rem,1.5vw,1.2rem);line-height:1.7;color:#e3d9e5;max-width:520px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(255,255,255,.25);padding:14px 21px;border-radius:100px;font-weight:900;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-3px)}.btn.primary{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}.btn.ghost:hover{background:rgba(255,255,255,.08)}
+.hero-card{min-height:440px;position:relative;border-radius:180px 180px 28px 28px;border:1px solid rgba(255,255,255,.18);overflow:hidden;background:linear-gradient(150deg,rgba(245,44,155,.35),rgba(255,223,53,.12) 60%),linear-gradient(45deg,#25172d,#57304e);display:flex;align-items:center;justify-content:center;text-align:center;padding:35px;box-shadow:0 35px 90px rgba(0,0,0,.24)}
+.hero-card:before,.hero-card:after{content:"";position:absolute;border:1px solid rgba(255,223,53,.25);border-radius:50%;width:270px;height:270px}.hero-card:after{width:350px;height:350px}
+.nameplate{position:relative;z-index:1;max-width:290px}.nameplate .spark{font-size:4rem;color:var(--yellow);line-height:1}.nameplate strong{display:block;font-family:Manrope,sans-serif;font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.06em;margin:15px 0 8px}.nameplate small{color:#f4e8f2;line-height:1.6;display:block}
+.sticker{position:absolute;z-index:2;right:-5px;top:14%;background:var(--yellow);color:var(--ink);padding:14px 17px;transform:rotate(7deg);font-weight:900;box-shadow:0 12px 30px #0003;border-radius:5px}.sticker span{display:block;color:#b80c70;font-size:.78rem}
+.scroll{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.2em;color:#cbbccc;text-transform:uppercase}
+section{padding:100px clamp(22px,8vw,120px)}.wrap{max-width:1160px;margin:auto}.paper{background:var(--paper);color:var(--ink)}.kicker{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#c20d77;font-weight:900}.section-head{max-width:760px;margin-bottom:40px}.section-head h2{font-family:Manrope,sans-serif;font-size:clamp(2.3rem,5vw,4.4rem);letter-spacing:-.065em;line-height:1.02;margin:12px 0 18px}.section-head p{color:#62536a;line-height:1.8;font-size:1.05rem}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:7vw;align-items:center}.photo-slot{min-height:360px;border-radius:18px;background:linear-gradient(145deg,#ffe98a,#ff8dc8);color:#32172d;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;position:relative;overflow:hidden;transform:rotate(-2deg);box-shadow:10px 16px 0 #f0dfe7}.photo-slot:before{content:"";position:absolute;inset:18px;border:1px dashed rgba(50,23,45,.4);border-radius:12px}.photo-slot .plus{font-size:3rem;position:relative}.photo-slot strong,.photo-slot span{position:relative}.photo-slot strong{font-family:Manrope,sans-serif;font-size:1.5rem;margin:14px 0 7px}.photo-slot span{font-size:.9rem;max-width:240px;line-height:1.5}.about-copy h3{font-family:Manrope,sans-serif;font-size:clamp(2rem,4vw,3.3rem);letter-spacing:-.06em;margin:10px 0 18px}.about-copy p{color:#51435a;line-height:1.85}.motto{display:inline-block;background:var(--yellow);padding:13px 17px;font-weight:900;transform:rotate(-2deg);margin-top:12px;box-shadow:5px 5px 0 var(--pink)}
+.manifesto{background:linear-gradient(140deg,#15111c,#29172e)}.manifesto-grid{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:center}.manifesto .section-head p{color:#d1c3d5}.motto-cards{display:grid;gap:17px}.motto-card{padding:25px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.035);transition:.25s}.motto-card:hover{transform:translateY(-4px);border-color:var(--pink)}.motto-card .symbol{font-size:1.8rem;color:var(--yellow)}.motto-card h3{font-family:Manrope,sans-serif;font-size:clamp(1.45rem,3vw,2.1rem);margin:8px 0}.motto-card h3 em{font-style:normal;color:var(--pink)}.motto-card p{color:#cfc4d3;line-height:1.65;margin:0}
+.assembly{background:var(--yellow);color:var(--ink);text-align:center;position:relative;overflow:hidden}.assembly:before{content:"!";position:absolute;right:7%;top:-110px;font-family:Manrope,sans-serif;font-size:28rem;font-weight:900;color:rgba(245,44,155,.1);line-height:1}.assembly .wrap{position:relative}.assembly .kicker{color:#b30b70}.assembly h2{font-family:Manrope,sans-serif;font-size:clamp(2.8rem,7vw,6.5rem);letter-spacing:-.075em;line-height:.96;margin:18px 0}.assembly p{max-width:720px;margin:0 auto 28px;line-height:1.8;font-size:1.1rem;color:#47334b}.assembly .btn{background:var(--bg);color:white;border-color:var(--bg)}.note{font-weight:900;color:#b30b70;margin-top:20px}
+.final{position:relative;text-align:center;background:radial-gradient(ellipse at center top,rgba(245,44,155,.24),transparent 65%),#15111c;overflow:hidden}.final h2{font-family:Manrope,sans-serif;font-size:clamp(2.7rem,7vw,6rem);letter-spacing:-.07em;line-height:.98;margin:15px 0}.final h2 span{color:var(--yellow)}.final p{color:#d2c5d7;line-height:1.7;max-width:600px;margin:0 auto 28px}.final .btn{margin-top:8px}
+footer{padding:25px clamp(22px,8vw,120px);background:#0d0a12;color:#b9a9bf;font-size:.82rem}.footer-inner{max-width:1160px;margin:auto;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:800px){.navlinks{display:none;position:absolute;top:68px;left:12px;right:12px;background:#21172a;padding:18px;border-radius:16px;flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.navlinks a{padding:10px}.menu{display:block}.hero{padding-top:120px}.grid,.about,.manifesto-grid{grid-template-columns:1fr}.grid{gap:38px}.hero-card{min-height:320px;border-radius:140px 140px 22px 22px;max-width:500px;width:100%;margin:auto}.sticker{right:8px}.about{gap:42px}.photo-slot{min-height:290px;max-width:420px;width:90%;margin:auto}.manifesto-grid{gap:20px}section{padding-top:76px;padding-bottom:76px}}
+@media(max-width:440px){.hero h1{font-size:3.05rem}.hero-card{min-height:280px}.section-head{margin-bottom:30px}.motto-card{padding:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#home"> GLORIA LOMBARDO </span></a>
+  <button class="menu" id="menuButton" aria-label="Apri menu" aria-expanded="false">☰</button>
+  <nav class="navlinks" id="navLinks">
+    <a href="#home">HOME</a><a href="#gloria">CHI È GLORIA</a><a href="#motti">I MOTTI</a><a href="#assemblea">ASSEMBLEA</a><a href="#vota" class="cta">CI VEDIAMO LÌ ✦</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home"><div class="grid">
+  <div class="reveal"><div class="eyebrow">Liceo Classico Cielo D'Alcamo · Candidata Elezioni 26/27</div>
+    <h1>CAMBIA<br>STORIA.<em>VOTA GLORIA.</em></h1>
+    <p>La voce degli studenti. <em>                 La scuola ha bisogno di noi!</em> </p>
+    <div class="actions"><a class="btn ghost" href="#gloria">CONOSCIAMOCI ↓</a><a class="btn primary" href="#assemblea">IDEE ↓</a></div>
+  </div>
+  <div class="hero-card reveal" aria-label="Spazio da personalizzare con una foto di Gloria"><div class="nameplate"><div class="spark"></div><div>Un nuovo sguardo,</div><span>con</span><span><strong>GLORIA<br>LOMBARDO</strong></span><div class="spark"></div></div></div>
+</div><div class="scroll">SCORRI PER SCOPRIRE ↓</div></section>
+
+<section class="paper" id="gloria"><div class="wrap about">
+  <div class="photo-slot reveal"><div class="block"><img src="locandina.jpg"  style="width:100%;height:148%;min-height:360px;object-fit:cover;position:absolute;inset:0"></div></div>
+  <div class="about-copy reveal"><h3>Mi presento...</h3>
+    <p>Sono <strong>Gloria Lombardo</strong>, studentessa del <strong>Liceo Classico Cielo D'Alcamo</strong> e candidata a rappresentante d'istituto.</p>
+    <p>Determinazione. Energia. Voglia di fare. </p>
+    <p>Ho sempre visto la scuola come un'opportunità di crescita e di espressione. Ma tutto parte da noi... tutto parte da te.</p>
+    <p>Se ci credi, votami ♡</p>
+    <div class="motto">GLORIA ELETTA, SCELTA PERFETTA ✦</div>
+  </div>
+</div></section>
+
+<section class="manifesto" id="motti"><div class="wrap manifesto-grid">
+  <div class="section-head reveal"><div class="eyebrow">DUE MOTTI. UN NOME.</div><h2>Te li ricordi, vero?</h2><p>Quando arriva il momento di scegliere, ricordati di Gloria Lombardo. E soprattutto: partecipa alla vita della scuola!</p></div>
+  <div class="motto-cards">
+    <article class="motto-card reveal"><div class="symbol">✳ 01</div><h3>Cambia storia,<br><em>vota Gloria.</em></h3><p>Il cambiamento comincia dal farsi sentire.</p></article>
+    <article class="motto-card reveal"><div class="symbol">✦ 02</div><h3>Gloria eletta,<br><em>scelta perfetta.</em></h3><p>Un nome da ricordare. Una candidatura da conoscere.</p></article>
+  </div>
+</div></section>
+
+<section class="assembly" id="assemblea"><div class="wrap reveal"><div class="kicker">L'APPUNTAMENTO DA NON PERDERE</div><h2>NON MANCARE<br>ALL'ASSEMBLEA!</h2><p>Vieni, partecipa e ascolta. È l'occasione per esserci, conoscere meglio la candidatura e far sentire anche la tua voce. Ci vediamo lì!</p><a class="btn" href="#vota">CI VEDIAMO ALL'ASSEMBLEA ↗</a><div class="note">LA TUA PRESENZA CONTA ♡</div></div></section>
+
+<section class="final" id="vota"><div class="wrap reveal"><div class="eyebrow">LICEO CLASSICO CIELO D'ALCAMO</div><h2>GLORIA ELEtta,<br><span>SCELTA PERFETTA.</span></h2><p>Ricorda il nome, partecipa all'assemblea e condividi la pagina con i tuoi compagni.</p><a class="btn primary" href="#home">TORNA SU ↑</a></div></section>
+</main>
+<footer><div class="footer-inner"><span>Gloria Lombardo · Candidata a rappresentante d'istituto</span><span>Cambia storia, vota Gloria ✦</span></div></footer>
+<script>
+const menuButton=document.getElementById('menuButton'),navLinks=document.getElementById('navLinks');
+menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰';});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰';}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body></html>
