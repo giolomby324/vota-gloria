@@ -45,9 +45,12 @@ footer{padding:25px clamp(22px,8vw,120px);background:#0d0a12;color:#b9a9bf;font-
 <!-- La schermata iniziale che copre il sito -->
 <div id="schermataIniziale">
     <div class="box-benvenuto">
-        <button id="btnEntra">ENTRA</button>
+        <h1>CLICCA QUI!</h1>
+        <p>Scopri le idee, le proposte e il programma di Gloria Lombardo per il nostro Istituto.</p>
+        <button id="btnEntra">Entra nel sito</button>
     </div>
 </div>
+
 
 <header class="nav">
   <a class="brand" href="#home"> GLORIA LOMBARDO </span></a>
@@ -124,45 +127,72 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 
 <style>
-  #schermataIniziale {
+  /* Schermata iniziale con effetto vetro satinato scuro e moderno */
+#schermataIniziale {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Sfondo scuro semi-trasparente */
+    background: rgba(15, 23, 42, 0.85); /* Sfondo scuro semitrasparente */
+    backdrop-filter: blur(20px); /* Sfoca in modo elegante il sito che sta sotto */
+    -webkit-backdrop-filter: blur(20px);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Rimane sopra a tutto il resto */
-    transition: opacity 0.5s ease;
+    z-index: 9999;
+    transition: opacity 0.6s ease-in-out;
 }
 
+/* Box centrale minimale e pulito */
 .box-benvenuto {
     text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: white;
-    font-family: Arial, sans-serif;
-    background: #222;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(255,255,255,0.2);
+    padding: 45px 35px;
+    max-width: 420px;
+    width: 90%;
 }
 
+.box-benvenuto h1 {
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+}
+
+.box-benvenuto p {
+    font-size: 1.05rem;
+    color: #94a3b8; /* Grigio chiaro rilassante */
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+/* Il Pulsante "Minimal Tech" */
 #btnEntra {
-    background-color: #ff4757;
-    color: white;
+    background: #ffffff;
+    color: #0f172a;
     border: none;
-    padding: 12px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
+    padding: 16px 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 14px; /* Angoli leggermente squadrati ma morbidi */
     cursor: pointer;
-    margin-top: 15px;
-    transition: transform 0.2s;
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+    transition: all 0.25s ease;
 }
 
+/* Effetto al passaggio del mouse */
 #btnEntra:hover {
-    transform: scale(1.05); /* Piccolo effetto quando ci passi sopra col mouse */
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+    background: #f8fafc;
+}
+
+/* Effetto al click */
+#btnEntra:active {
+    transform: translateY(-1px);
 }
 
 </style>
