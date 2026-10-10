@@ -45,7 +45,7 @@ footer{padding:25px clamp(22px,8vw,120px);background:#0d0a12;color:#b9a9bf;font-
 <!-- La schermata iniziale che copre il sito -->
 <div id="schermataIniziale">
     <div class="box-benvenuto">
-        <h1>CLICCA QUI!</h1>
+        <h1>♡</h1>
         <p>Scopri le idee, le proposte e il programma di Gloria Lombardo per il nostro Istituto.</p>
         <button id="btnEntra">Entra nel sito</button>
     </div>
@@ -127,73 +127,85 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
 
 <style>
-  /* Schermata iniziale con effetto vetro satinato scuro e moderno */
+  /* Schermata iniziale con sfumatura fucsia e gialla fluida */
 #schermataIniziale {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(15, 23, 42, 0.85); /* Sfondo scuro semitrasparente */
-    backdrop-filter: blur(20px); /* Sfoca in modo elegante il sito che sta sotto */
-    -webkit-backdrop-filter: blur(20px);
+    background: linear-gradient(135deg, #ff007f 0%, #ffcc00 100%); /* Mix fucsia e giallo canarino */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Box centrale minimale e pulito */
+/* Box centrale con effetto vetro scuro per far risaltare i testi */
 .box-benvenuto {
     text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     color: white;
-    padding: 45px 35px;
-    max-width: 420px;
+    padding: 50px 40px;
+    background: rgba(0, 0, 0, 0.45); /* Sfondo scuro semitrasparente per contrasto */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    max-width: 440px;
     width: 90%;
 }
 
+/* Titolo in Giallo Canarino */
 .box-benvenuto h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     margin-bottom: 12px;
     font-weight: 800;
+    text-transform: uppercase;
     letter-spacing: -0.5px;
-    color: #ffffff;
+    color: #ffcc00; /* Giallo Canarino */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .box-benvenuto p {
-    font-size: 1.05rem;
-    color: #94a3b8; /* Grigio chiaro rilassante */
+    font-size: 1.1rem;
+    color: #f8fafc;
     margin-bottom: 35px;
     line-height: 1.6;
+    font-weight: 500;
 }
 
-/* Il Pulsante "Minimal Tech" */
+/* Il Pulsante Elettorale Fucsia / Giallo */
 #btnEntra {
-    background: #ffffff;
-    color: #0f172a;
+    background: #ff007f; /* Base Fucsia */
+    color: white;
     border: none;
-    padding: 16px 50px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 14px; /* Angoli leggermente squadrati ma morbidi */
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
-    transition: all 0.25s ease;
+    text-transform: uppercase;
+    box-shadow: 0 10px 25px rgba(255, 0, 127, 0.35);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Effetto al passaggio del mouse */
+/* Effetto al passaggio del mouse: diventa Giallo Canarino con testo Fucsia */
 #btnEntra:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
-    background: #f8fafc;
+    transform: translateY(-4px) scale(1.03);
+    background: #ffcc00; /* Diventa Giallo Canarino */
+    color: #ff007f; /* Il testo diventa Fucsia */
+    box-shadow: 0 15px 30px rgba(255, 204, 0, 0.4);
 }
 
 /* Effetto al click */
 #btnEntra:active {
-    transform: translateY(-1px);
+    transform: translateY(-1px) scale(0.98);
 }
+
 
 </style>
 </body></html>
