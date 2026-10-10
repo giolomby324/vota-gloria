@@ -115,5 +115,47 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
         }, 500); // Aspetta mezzo secondo per l'effetto dissolvenza
     });
 </script>
+<style>
+  #schermataIniziale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Sfondo scuro semi-trasparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Rimane sopra a tutto il resto */
+    transition: opacity 0.5s ease;
+}
 
+.box-benvenuto {
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    background: #222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255,255,255,0.2);
+}
+
+#btnEntra {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s;
+}
+
+#btnEntra:hover {
+    transform: scale(1.05); /* Piccolo effetto quando ci passi sopra col mouse */
+}
+
+</style>
 </body></html>
