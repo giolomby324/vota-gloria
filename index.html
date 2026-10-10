@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#15111c;--bg2:#21172a;--pink:#f52c9b;--pink-light:#ff80c5;--yellow:#ffdf35;--paper:#eee877;--ink:#21172a;--muted:#cfc4d3;--block:#202094;--line:rgba(255,255,255,.15)}
+:root{--bg:#15111c;--bg2:#21172a;--pink:#f52c9b;--pink-light:#ff80c5;--yellow:#ffdf35;--paper:#eee877;--ink:#21172a;--muted:#cfc4d3;--block:#f2a521;--line:rgba(255,255,255,.15)}
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:82px}body{margin:0;background:var(--bg);color:#fffafc;font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}
 .nav{position:fixed;z-index:10;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:15px clamp(18px,5vw,76px);background:rgba(21,17,28,.83);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .brand{font-family:Manrope,sans-serif;font-weight:900;letter-spacing:-.05em;line-height:1.05}.brand span{display:block;color:var(--yellow);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase}
@@ -35,18 +35,18 @@ footer{padding:25px clamp(22px,8vw,120px);background:#0d0a12;color:#b9a9bf;font-
 @media(max-width:440px){.hero h1{font-size:3.05rem}.hero-card{min-height:280px}.section-head{margin-bottom:30px}.motto-card{padding:20px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
 </style>
+<link rel="stylesheet" href="https://cloudflare.com">
+
 </head>
 <body>
   <!-- Il file audio nascosto (senza la scritta "controls" così non si vede il lettore) -->
 <audio id="musicaSfondo" loop>
-    <source src="democrazia.mp3" type="audio/mpeg">
+    <source src="democrazia_audio.mp3" type="audio/mpeg">
 </audio>
 
 <!-- La schermata iniziale che copre il sito -->
 <div id="schermataIniziale">
     <div class="box-benvenuto">
-        <h1>♡</h1>
-        <p>Scopri le idee, le proposte e il programma di Gloria Lombardo per il nostro Istituto.</p>
         <button id="btnEntra">Entra nel sito</button>
     </div>
 </div>
@@ -56,7 +56,7 @@ footer{padding:25px clamp(22px,8vw,120px);background:#0d0a12;color:#b9a9bf;font-
   <a class="brand" href="#home"> GLORIA LOMBARDO </span></a>
   <button class="menu" id="menuButton" aria-label="Apri menu" aria-expanded="false">☰</button>
   <nav class="navlinks" id="navLinks">
-    <a href="#home">HOME</a><a href="#gloria">CHI È GLORIA</a><a href="#motti">I MOTTI</a><a href="#assemblea">ASSEMBLEA</a><a href="#vota" class="cta">CI VEDIAMO LÌ ✦</a>
+    <a href="#home">HOME</a><a href="#gloria">CHI È GLORIA</a><a href="#sezioneIdee">BOX</a><a href="#assemblea">ASSEMBLEA</a><a href="#vota" class="cta">CI VEDIAMO LÌ ✦</a>
   </nav>
 </header>
 <main>
@@ -66,8 +66,8 @@ footer{padding:25px clamp(22px,8vw,120px);background:#0d0a12;color:#b9a9bf;font-
     <p>La voce degli studenti. <em>                 La scuola ha bisogno di noi!</em> </p>
     <div class="actions"><a class="btn ghost" href="#gloria">CONOSCIAMOCI ↓</a><a class="btn primary" href="#assemblea">IDEE ↓</a></div>
   </div>
-  <div class="hero-card reveal" aria-label="Spazio da personalizzare con una foto di Gloria"><div class="nameplate"><div class="spark"></div><div>Un nuovo sguardo,</div><span>con</span><span><strong>GLORIA<br>LOMBARDO</strong></span><div class="spark"></div></div></div>
-</div><div class="scroll">SCORRI PER SCOPRIRE ↓</div></section>
+  <div class="hero-card reveal" aria-label="Spazio da personalizzare con una foto di Gloria"><div class="nameplate"><div class="spark"></div><div>UN NUOVO SGUARDO,</div><span>CON</span><span><strong><em>GLORIA LOMBARDO</em></strong></span><div class="spark"></div></div></div>
+</div><div class="scroll">SCORRI ↓</div></section>
 
 <section class="paper" id="gloria"><div class="wrap about">
   <div class="photo-slot reveal"><div class="block"><img src="locandina.jpg"  style="width:100%;height:148%;min-height:360px;object-fit:cover;position:absolute;inset:0"></div></div>
@@ -80,19 +80,166 @@ footer{padding:25px clamp(22px,8vw,120px);background:#0d0a12;color:#b9a9bf;font-
   </div>
 </div></section>
 
-<section class="manifesto" id="motti"><div class="wrap manifesto-grid">
-  <div class="section-head reveal"><div class="eyebrow">DUE MOTTI. UN NOME.</div><h2>Te li ricordi, vero?</h2><p>Quando arriva il momento di scegliere, ricordati di Gloria Lombardo. E soprattutto: partecipa alla vita della scuola!</p></div>
-  <div class="motto-cards">
-    <article class="motto-card reveal"><div class="symbol">✳ 01</div><h3>Cambia storia,<br><em>vota Gloria.</em></h3><p>Il cambiamento comincia dal farsi sentire.</p></article>
-    <article class="motto-card reveal"><div class="symbol">✦ 02</div><h3>Gloria eletta,<br><em>scelta perfetta.</em></h3><p>Un nome da ricordare. Una candidatura da conoscere.</p></article>
-  </div>
-</div></section>
+<section class="block" id="sezioneIdee">
+    <div class="container-idee">
+        <h2>Lascia la tua idea ✦</h2>
+        <p>Hai proposte per migliorare l'istituto? Scrivile qui sotto, la tua opinione conta! </p>
+        <p>(Ciò che scriverai sarà visibile solo a Gloria)</p>
+        
+        <!-- Il tuo modulo Formspree originale -->
+        <form action="https://formspree.io/f/xdeazzdo" method="POST" id="formIdee">
+            <div class="input-group">
+                <label for="nomeStudente">Nome (Opzionale)</label>
+                <input type="text" id="nomeStudente" name="nome" placeholder="Es. Anonimo, o il tuo nome e classe">
+            </div>
+            
+            <div class="input-group">
+                <label for="messaggioIdea">La tua proposta *</label>
+                <textarea id="messaggioIdea" name="proposta" rows="5" required placeholder="Scrivi qui la tua idea per la scuola..."></textarea>
+            </div>
+            
+            <button type="submit" id="btnInviaIdea">Invia Proposta</button>
+        </form>
 
-<section class="assembly" id="assemblea"><div class="wrap reveal"><div class="kicker">L'APPUNTAMENTO DA NON PERDERE</div><h2>NON MANCARE<br>ALL'ASSEMBLEA!</h2><p>Vieni, partecipa e ascolta. È l'occasione per esserci, conoscere meglio la candidatura e far sentire anche la tua voce. Ci vediamo lì!</p><a class="btn" href="#vota">CI VEDIAMO ALL'ASSEMBLEA ↗</a><div class="note">LA TUA PRESENZA CONTA ♡</div></div></section>
+        <!-- 🌟 MESSAGGIO DI SUCCESSO (Inizialmente nascosto) -->
+        <div id="messaggioSuccesso" style="display: none; text-align: center; padding: 20px 10px;">
+            <h3 style="color: #ffcc00; font-size: 1.8rem; margin-bottom: 12px; font-weight: 800; text-transform: uppercase;">Grazie!</h3>
+            <p style="color: #f8fafc; font-size: 1.1rem; line-height: 1.5; margin: 0;">La tua proposta è stata inviata con successo.<br>Gloria la leggerà prestissimo!</p>
+        </div>
+    </div>
+</section>
 
-<section class="final" id="vota"><div class="wrap reveal"><div class="eyebrow">LICEO CLASSICO CIELO D'ALCAMO</div><h2>GLORIA ELEtta,<br><span>SCELTA PERFETTA.</span></h2><p>Ricorda il nome, partecipa all'assemblea e condividi la pagina con i tuoi compagni.</p><a class="btn primary" href="#home">TORNA SU ↑</a></div></section>
+<style>
+#sezioneIdee {
+    padding: 60px 20px;
+    background: #7af8e5;
+    display: flex;
+    justify-content: center;
+}
+
+.container-idee {
+    max-width: 600px;
+    width: 100%;
+    background: #0f172a; /* Sfondo scuro profondo per far risaltare i colori */
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: white;
+}
+
+.container-idee h2 {
+    color: #ffcc00; /* Giallo Canarino */
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.container-idee p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #f8fafc;
+}
+
+/* Campi di testo stilizzati */
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Quando l'utente clicca per scrivere, il bordo si illumina di Giallo Canarino */
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: #ffcc00;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Pulsante Fucsia */
+#btnInviaIdea {
+    width: 100%;
+    background: #ff007f; /* Fucsia */
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 0, 127, 0.3);
+}
+
+/* Al passaggio del mouse il pulsante diventa Giallo Canarino con testo Fucsia */
+#btnInviaIdea:hover {
+    background: #ffcc00;
+    color: #ff007f;
+    box-shadow: 0 8px 20px rgba(255, 204, 0, 0.4);
+    transform: translateY(-2px);
+}
+</style>
+
+<section class="assembly" id="assemblea"><div class="wrap reveal"><div class="kicker">L'APPUNTAMENTO DA NON PERDERE</div><h2>NON MANCARE<br>ALL'ASSEMBLEA!</h2><p>Vieni, partecipa e ascolta. È l'occasione per esserci, conoscere meglio la candidatura e far sentire anche la tua voce. Ci vediamo lì!</p><p><div class="note">LA TUA PRESENZA CONTA ♡</div></p><p><a class="btn" href="#vota">ⓘ INFO ↓</a></p></div></section>
+
+<section class="final" id="vota">
+    <div class="wrap reveal">
+        <div class="eyebrow">LICEO CLASSICO CIELO D'ALCAMO</div>
+        <h2>GLORIA ELETTA,<br><span>SCELTA PERFETTA.</span></h2>
+        <p>Per qualsiasi info, contattami in dm! ↓</p>
+        
+        <p>
+            <a class="btn primary" href="https://instagram.com/gloria_lombardoo" target="_blank" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+                <!-- 📸 LOGO DI INSTAGRAM REALE INSERITO DIRETTAMENTE -->
+                <svg xmlns="http://w3.org" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>
+                gloria_lombardoo
+            </a>
+        </p>
+        
+        <a class="btn primary" href="#home">TORNA SU ↑</a>
+    </div>
+</section>
+
 </main>
-<footer><div class="footer-inner"><span>Gloria Lombardo · Candidata a rappresentante d'istituto</span><span>Cambia storia, vota Gloria ✦</span></div></footer>
+<footer><div class="footer-inner"><div style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px;">
+    <span style="font-weight: 500; opacity: 0.85;">Made by Gioele Lombardo</span>
+    
+    <!-- Link unico: cliccando sul logo o sull'username andrai direttamente su Instagram -->
+    <a href="https://instagram.com/gioele_lombardoo" target="_blank" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; gap: 6px; font-weight: bold; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+        <!-- 📸 LOGO DI INSTAGRAM SVG NATIVO -->
+        <svg xmlns="http://w3.org" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="display: inline-block;">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>
+        <span>gioele_lombardoo</span>
+    </a>
+</div>
+<span>Cambia storia, vota Gloria ✦</span></div></footer>
 <script>
 const menuButton=document.getElementById('menuButton'),navLinks=document.getElementById('navLinks');
 menuButton.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰';});
@@ -208,4 +355,39 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
 
 </style>
+<script>
+    const form = document.getElementById("formIdee");
+    const successoDiv = document.getElementById("messaggioSuccesso");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Blocca il redirect automatico alla pagina bianca
+        
+        const data = new FormData(form);
+        const button = document.getElementById("btnInviaIdea");
+        button.innerText = "Invia in corso...";
+        button.disabled = true;
+
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                form.style.display = "none"; // Nasconde i campi per scrivere
+                successoDiv.style.display = "block"; // Mostra il "Grazie!" in giallo
+            } else {
+                response.json().then(data => {
+                    alert("Si è verificato un errore: " + data.error);
+                    button.innerText = "Invia Proposta";
+                    button.disabled = false;
+                });
+            }
+        }).catch(error => {
+            alert("Errore di connessione. Riprova più tardi.");
+            button.innerText = "Invia Proposta";
+            button.disabled = false;
+        });
+    });
+</script>
+
 </body></html>
