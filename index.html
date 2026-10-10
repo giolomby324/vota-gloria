@@ -103,18 +103,26 @@ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
     const musica = document.getElementById('musicaSfondo');
 
     btnEntra.addEventListener('click', () => {
-        // Avvia la musica nascosta
-        musica.play().catch(error => {
-            console.log("Il browser ha bloccato l'audio:", error);
-        });
+        // Forza il browser a caricare l'audio da zero prima di riprodurlo
+        musica.load(); 
         
-        // Fà sparire la schermata di benvenuto
+        // Avvia la riproduzione
+        musica.play()
+            .then(() => {
+                console.log("Audio avviato con successo!");
+            })
+            .catch(error => {
+                console.error("Errore di riproduzione:", error);
+            });
+        
+        // Fai sparire la schermata di benvenuto
         schermata.style.opacity = '0';
         setTimeout(() => {
             schermata.style.display = 'none';
-        }, 500); // Aspetta mezzo secondo per l'effetto dissolvenza
+        }, 500);
     });
 </script>
+
 <style>
   #schermataIniziale {
     position: fixed;
