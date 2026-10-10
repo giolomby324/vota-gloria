@@ -37,6 +37,18 @@ footer{padding:25px clamp(22px,8vw,120px);background:#0d0a12;color:#b9a9bf;font-
 </style>
 </head>
 <body>
+  <!-- Il file audio nascosto (senza la scritta "controls" così non si vede il lettore) -->
+<audio id="musicaSfondo" loop>
+    <source src="democrazia.mp3" type="audio/mpeg">
+</audio>
+
+<!-- La schermata iniziale che copre il sito -->
+<div id="schermataIniziale">
+    <div class="box-benvenuto">
+        <button id="btnEntra">ENTRA</button>
+    </div>
+</div>
+
 <header class="nav">
   <a class="brand" href="#home"> GLORIA LOMBARDO </span></a>
   <button class="menu" id="menuButton" aria-label="Apri menu" aria-expanded="false">☰</button>
@@ -85,4 +97,23 @@ navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLin
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script>
+<script>
+    const btnEntra = document.getElementById('btnEntra');
+    const schermata = document.getElementById('schermataIniziale');
+    const musica = document.getElementById('musicaSfondo');
+
+    btnEntra.addEventListener('click', () => {
+        // Avvia la musica nascosta
+        musica.play().catch(error => {
+            console.log("Il browser ha bloccato l'audio:", error);
+        });
+        
+        // Fà sparire la schermata di benvenuto
+        schermata.style.opacity = '0';
+        setTimeout(() => {
+            schermata.style.display = 'none';
+        }, 500); // Aspetta mezzo secondo per l'effetto dissolvenza
+    });
+</script>
+
 </body></html>
